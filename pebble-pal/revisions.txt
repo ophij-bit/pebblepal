@@ -1,0 +1,74 @@
+Project Revision Log
+------------------------------------------------------------------------------
+Program Title:          Pebble Pal
+Author:                 Ophi Joughin
+Log Start Date:         10/05/2025
+Last Revision Date:     11/16/2025
+------------------------------------------------------------------------------
+Assignment 01
+A01.1 - initial assignment; variable initialization, message initialization, 
+        user input, calculations, if statements, display outputs
+A01.2 - string formatting review, identify where optimization may be needed, 
+        limit length of label 
+A01.3 - adding boolean variable 'is_shiny' for further determination of guess
+        of rock type, linked document of rock types used for this program, 
+        revised if statements
+A01.4 - fixed line length compile error
+------------------------------------------------------------------------------
+Assignment 02
+A02.1 - re-factored code into functions, converted static messaging into 
+        constants, drafted doc-strings
+A02.2 - continued refactoring; identifying high coupling and revising 
+        appropriately, adding try/except where needed
+A02.3 - corrected argument order for results table, extracted rock type 
+        densities into constants, updated parameter name for string functions
+        to not be confused with built in names
+A02.4 - correcting if statement indentation
+A02.5 - finishing doc strings, correcting typos
+------------------------------------------------------------------------------
+Assignment 03
+A03.1 - began implementing menu options; print menu, get option
+A03.2 - continued implementing menu options, consolidated functions for 
+        user input
+A03.3 - implemented sub menu of sample types, contemplated optimization
+A03.4 - introduced modules for rock information and for menu options, reduced
+        menu generation functions to singular function passed arguments for 
+        title, number of options, and option content/labels. Began to break 
+        down guess function into type based guess functions containing get 
+        functions for each property. Working on density check function that 
+        accesses list of possible rocks/minerals in same range as 
+        calculated density
+A03.5 - clean-up, doc strings, spell-check across files
+------------------------------------------------------------------------------
+Assignment 04
+A04.1 - added parallel lists for labels and guesses, implemented display
+        functions for sample log, introduced new function to display densities
+        calculated so far along with information about the average density, 
+        and how many samples float/sink/suspend. Updated shorten_string 
+        function to account for strings less than 4 chars (need an extra tab
+        to align). Added a dens_count variable to count the number of density
+        calculations (parallel to 'samples' var).
+A04.2 - reset to version A03.5, for the sake of better adhering to the APD, 
+        adjusted 'samples' variable to a_count (count of samples analyzed),
+        added d_count (count of densities calculated). Added lists for 
+        samples analysis branch (a_labels, guesses, facts) and density
+        calculator branch (d_labels, masses, volumes). Adjusted 
+        analysis branch to append labels and guesses to lists. Adjusted
+        density branch to append labels, masses, and volumes to lists.
+        differentiated log display functions for samples analysis and 
+        densities.
+A04.3 - adjusted print_end function to take a_count and d_count to display.
+        Updated shorten_string function to add an extra tab if label is below
+        maximum length, and add nothing if equal to max len.
+A04.3 - reworked menus.py module functions to take an index value and access
+        parallel lists for menu titles & option sets. This enabled me to 
+        eliminate duplicate functions in main and replace them with generic 
+        get_attribute(). Minor formatting adjustments for print intro and 
+        print end, added emoji.
+A04.4 - reworked density lists in rockfacts.py to utilize parallel lists for 
+        common rock/mineral names, lows and highs for density ranges, added 
+        two functions to check the density against the lists and pull the 
+        matching indices, and a second to print a list using that list of 
+        indices
+A04.5 - updated doc strings, double checked formatting, cleaned up common
+        density comparison lists in rockfacts.py
